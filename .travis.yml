@@ -1,5 +1,5 @@
 language: go
-go: [1.14]
+go: [1.13, 1.14]
 
 stages:
   - build
@@ -16,6 +16,7 @@ jobs:
       script: |
         make build
         output=pie-$(cat version).$TRAVIS_BUILD_NUMBER.tar.gz
+        echo $output
         cd $TRAVIS_BUILD_DIR/bin
         tar -zcvf $output *
-        cd $TRAVIS_BUILD_DIR
+        ls -la
