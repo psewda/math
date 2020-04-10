@@ -9,3 +9,8 @@ jobs:
       script: make build
     - stage: test
       script: go test -v ./...
+
+stages:
+  - build
+  - test
+  
