@@ -20,3 +20,4 @@ jobs:
         cd $TRAVIS_BUILD_DIR/bin
         tar -zcvf $output *
         ls -la
+
