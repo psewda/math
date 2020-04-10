@@ -8,9 +8,8 @@ jobs:
     - stage: build
       script: make build
     - stage: test
-      script: go test -v ./...
+      script: make test
 
 stages:
   - build
   - test
-  
