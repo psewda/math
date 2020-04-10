@@ -14,4 +14,8 @@ jobs:
       script: make test
     - stage: package
       script: |
+        pwd
         echo $TRAVIS_BUILD_DIR
+        cd $TRAVIS_BUILD_DIR/bin
+        tar -zcvf .
+        cd $TRAVIS_BUILD_DIR
