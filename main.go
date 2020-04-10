@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/rs/xid"
+)
 
 func main() {
-	fmt.Println("Hello Math !!")
+
+	uid := xid.New().String()
+
+	fmt.Println("Hello Math => " + uid)
 }

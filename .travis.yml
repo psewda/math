@@ -1,23 +1,7 @@
 language: go
-go: [1.13, 1.14]
+go: 
+  - "1.14.x"
 
-stages:
-  - build
-  # - test
-  - deploy
-
-jobs:
-  include:
-    - stage: build
-      script: make build
-    # - stage: test
-    #   script: make test
-    - stage: deploy
-      script: |
-        make build
-        output=pie-$(cat version).$TRAVIS_BUILD_NUMBER.tar.gz
-        echo $output
-        cd $TRAVIS_BUILD_DIR/bin
-        tar -zcvf $output *
-        ls -la
-
+script:
+  make build
+  make test
