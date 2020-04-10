@@ -15,8 +15,7 @@ jobs:
     - stage: deploy
       script: |
         make build
-        pwd
-        echo $TRAVIS_BUILD_DIR
+        output=pie-$(cat version).$TRAVIS_BUILD_NUMBER.tar.gz
         cd $TRAVIS_BUILD_DIR/bin
-        tar -zcvf pie-$(cat version).$TRAVIS_BUILD_NUMBER ./*
+        tar -zcvf $output *
         cd $TRAVIS_BUILD_DIR
