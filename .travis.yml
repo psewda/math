@@ -4,6 +4,7 @@ go: [1.14]
 stages:
   - build
   - test
+  - package
 
 jobs:
   include:
@@ -11,3 +12,6 @@ jobs:
       script: make build
     - stage: test
       script: make test
+    - stage: package
+      script: |
+        echo $TRAVIS_BUILD_DIR
