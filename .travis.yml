@@ -1,9 +1,13 @@
 language: go
 go: 
   - "1.14.x"
+  - "master"
 
 install:
-  go get -u github.com/mgechev/revive
+  - go get -t -v
+  - echo "done..."
+  - go get -t -v ./...
+  - go get -u github.com/mgechev/revive
 
 script:
   - revive -config defaults.toml ./...
