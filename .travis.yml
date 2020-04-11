@@ -4,6 +4,7 @@ go:
   - "master"
 
 install:
+  - go get -t -v
   - echo "done..."
   - go get -t -v ./...
   - go get -u github.com/mgechev/revive
