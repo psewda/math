@@ -19,3 +19,4 @@ deploy:
   bucket: "pie-test1"
   region: ap-south-1
   upload-dir: travis-ci-build
+  local_dir: bin
