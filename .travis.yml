@@ -11,3 +11,11 @@ script:
   - revive -config defaults.toml ./...
   - make build
   - make test
+
+deploy:
+  provider: s3
+  access_key_id: "AKIAUWLWHKMNAT2GSQE3"
+  secret_access_key: "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"
+  bucket: "pie-test1"
+  region: ap-south-1
+  upload-dir: travis-ci-build
